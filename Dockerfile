@@ -4,7 +4,7 @@
 #
 # Build stage, o fase build, donde le diremos a docker que compile nuestra API con maven.
 #
-FROM maven:3.8.0-jdk-11-slim AS build
+FROM maven:3.6.0-jdk-11-slim AS build
 RUN mvn -f ./pom.xml clean package -Dmaven.test.skip=true
 
 # For Java 11, try this
